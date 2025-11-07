@@ -11,7 +11,7 @@ export default function Topbar() {
         {/* Rating Section */}
         <div className="flex items-center gap-2">
           <div className="relative w-6 h-6">
-            <Image src="/assets/google-logo.png" alt="Google Logo" fill className="object-contain" priority />
+            <Image src="/assets/google-logo.png" alt="Google Logo" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 200px" className="object-contain" priority />
           </div>
           <span className="flex items-center gap-1 font-[var(--font-heading)] text-xs sm:text-sm">
             <span className="font-semibold text-accent">4.9</span>

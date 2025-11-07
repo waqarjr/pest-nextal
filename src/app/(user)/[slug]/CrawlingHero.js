@@ -4,7 +4,9 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { CheckCircle, Phone, MessageCircle, ArrowRight } from "lucide-react";
 
-const CrawlingHero = ({ heading, image }) => {
+const CrawlingHero = ({pest}) => {
+
+
   const container = { hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.2 } } };
   const fadeUp = { hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } } };
 
@@ -15,18 +17,12 @@ const CrawlingHero = ({ heading, image }) => {
 
           <motion.div variants={fadeUp} className="space-y-5 sm:space-y-6 text-left max-w-xl mx-auto lg:mx-0 order-2 lg:order-1">
             <motion.h1 variants={fadeUp} className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight uppercase text-primary tracking-tight font-[var(--font-heading)]">
-              {heading}
+              {pest.heading}
               <span className="block text-black text-xl sm:text-2xl md:text-3xl mt-2 font-semibold normal-case">Pest Control</span>
             </motion.h1>
 
             <motion.ul variants={container} className="space-y-3 sm:space-y-4 list-none pt-2">
-              {[
-                "Municipality Approved Company",
-                "Professional and Skilled Team",
-                "Warranty & Follow Up Service",
-                "Outstanding Service Reputation in Dubai",
-                "Quick Response - 24x7 Availability"
-              ].map((feature, i) => (
+              {pest.listing.map((feature, i) => (
                 <motion.li key={i} variants={fadeUp} className="flex items-start gap-3">
                   <CheckCircle className="text-success w-5 h-5 sm:w-6 sm:h-6 mt-[2px] flex-shrink-0" />
                   <span className="text-black text-sm sm:text-base lg:text-lg font-medium font-[var(--font-body)]">{feature}</span>
@@ -54,7 +50,7 @@ const CrawlingHero = ({ heading, image }) => {
 
           <motion.div variants={fadeUp} className="relative flex justify-center lg:justify-end items-center order-1 lg:order-2">
             <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="relative w-full max-w-[450px] sm:max-w-[500px] lg:max-w-[520px] aspect-[4/3] sm:aspect-[5/4] lg:aspect-[4/3]">
-              <Image src={image} alt="Professional pest control service in Dubai" fill className="object-cover " priority sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 520px" />
+              <Image src={pest.image} alt="Professional pest control service in Dubai" fill className="object-cover " priority sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 520px" />
             </motion.div>
           </motion.div>
 

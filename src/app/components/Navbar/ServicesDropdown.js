@@ -142,7 +142,7 @@ const handleMouseLeave = (e) => {
                       <motion.ul initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.25 }} className="pl-4 text-black text-sm space-y-1 font-[var(--font-body)]">
                         {section.items.map((item, i) => (
                           <motion.li key={item.slug} custom={i} initial="hidden" animate="visible" variants={listItemVariants}>
-                            <Link href={`/services/${item.slug}`} onClick={handleLinkClick} className="block py-1 w-full text-left hover:text-accent transition-colors duration-200">
+                            <Link href={`/${item.slug}`} onClick={handleLinkClick} className="block py-1 w-full text-left hover:text-accent transition-colors duration-200">
                               {item.name}
                             </Link>
                           </motion.li>
@@ -179,7 +179,7 @@ const handleMouseLeave = (e) => {
                   <ul className="space-y-1">
                     {section.items.map((item, i) => (
                       <motion.li key={item.slug} custom={i} initial="hidden" animate="visible" variants={listItemVariants}>
-                        <Link href={`/services/${item.slug}`} onClick={handleLinkClick} className="text-black hover:text-primary transition-all duration-200 text-sm w-full text-left px-3 py-1.5 rounded-md hover:bg-secondary hover:pl-4 flex items-center font-[var(--font-body)]">
+                        <Link href={`/${item.slug}`} onClick={handleLinkClick} className="text-black hover:text-primary transition-all duration-200 text-sm w-full text-left px-3 py-1.5 rounded-md hover:bg-secondary hover:pl-4 flex items-center font-[var(--font-body)]">
                           <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-60" />
                           {item.name}
                         </Link>

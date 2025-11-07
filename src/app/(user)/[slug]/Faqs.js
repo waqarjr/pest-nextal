@@ -1,25 +1,22 @@
 "use client";
 import React, { useState } from "react";
 import { Plus, Minus } from "lucide-react";
-import FrequentlyQuestions from "@/app/_data/FrequentlyQuestions";
 
-export const Faqs = () => {
+export const Faqs = ({question}) => {
   const [openIndex, setOpenIndex] = useState(null);
-  
-  const askedQuestion = FrequentlyQuestions['/'];
- 
+
   return (
     <section className="py-16 bg-secondary">
       <div className="w-custom mx-auto px-1 md:px-6">
         <h2 className="text-3xl font-bold text-primary text-center">
-          {askedQuestion.heading}
+          {question.heading}
         </h2>
         <p className="text-lg text-black text-center mt-2">
-          {askedQuestion.paragraph}
+          {question.paragraph}
         </p>
 
         <div className="mt-10 space-y-4">
-          {askedQuestion.faqs.map((item, idx) => (
+          {question.faqs.map((item, idx) => (
             <div key={idx} className="card border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-lg">
               {/* Toggle Button */}
               <button onClick={() => setOpenIndex(openIndex === idx ? null : idx)} className="flex justify-between items-center w-full p-5 text-left transition-colors hover:bg-gray-50">
