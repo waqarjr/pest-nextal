@@ -18,7 +18,6 @@ export default async function Page({ params }) {
   const hero = HeroSection[slug];
   const expertTeamData = ExpertTeamData[slug];
   const askedQuestion = FrequentlyQuestions[slug];
-  console.log(askedQuestion);
   
   return (
     <>
