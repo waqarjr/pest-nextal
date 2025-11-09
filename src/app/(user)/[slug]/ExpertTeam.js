@@ -1,3 +1,4 @@
+'use client'
 import { ShieldCheck, SprayCan, Leaf, Search, Wrench, AlertTriangle, Building2, Phone } from "lucide-react";
 import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
 
