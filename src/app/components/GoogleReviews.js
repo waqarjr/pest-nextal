@@ -94,7 +94,7 @@ const ReviewCard = ({ review }) => {
   );
 };
 
-export default function ReviewsSection() {
+export default function GoogleReviews() {
   const [mounted, setMounted] = useState(false);
   const [showAll, setShowAll] = useState(false);
   const swiperRef = useRef(null);
@@ -158,7 +158,7 @@ export default function ReviewsSection() {
 
   return (
     <section className="py-12 sm:py-20 px-4 sm:px-6 bg-secondary">
-      <div className="max-w-7xl mx-auto">
+      <div className="w-custom mx-auto">
         {/* Title */}
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-primary mb-2 font-[var(--font-heading)]">

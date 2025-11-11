@@ -13,6 +13,7 @@ import Documentation from './Documentation';
 import DocumentationData from '@/app/_data/policies/DocumentationData';
 import Professional from './Professional';
 import ProfessionalData from '@/app/_data/policies/ProfessionalData';
+import GoogleReviews from '@/app/components/GoogleReviews';
 
 
 export default  function Page ({params})  {
@@ -30,6 +31,7 @@ export default  function Page ({params})  {
             {/* <Documentation data={DocData} />
             <Professional data={ProfData} /> */}
             <AboutCompany/>
+            <GoogleReviews/>
             <ContactInfo/>
             <ContactPage/>
     </>

@@ -10,6 +10,7 @@ import { Faqs } from "../components/Faqs";
 import ContactPage from "../components/ContactPage";
 import ContactInfo from "../components/ContactInfo";
 import HeroSection from "../components/HeroSection";
+import GoogleReviews from "../components/GoogleReviews";
 
 export default function Home() {
   return (<>
@@ -18,6 +19,7 @@ export default function Home() {
     <Pests/>
     <ServiceCategories/>
     <CoreServices/> 
+    <GoogleReviews/>
     <Clients/>
     <ServiceAreasPage/>
     <WhyChooseUs/>
