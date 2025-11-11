@@ -10,7 +10,7 @@ export const Faqs = () => {
  
   return (
     <section className="py-16 bg-secondary">
-      <div className=" mx-auto px-1 md:px-6">
+      <div className=" mx-auto max-w-7xl px-6 md:px-6">
         <h2 className="text-3xl font-bold text-primary text-center">
           {askedQuestion.heading}
         </h2>

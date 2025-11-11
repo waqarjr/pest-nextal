@@ -12,7 +12,7 @@ export default function IndustriesWeServe() {
 
   return (
     <section className="py-16 sm:py-20 bg-secondary/5 font-[var(--font-body)]">
-      <div className="w-custom mx-auto px-3 sm:px-6">
+      <div className=" mx-auto px-3 sm:px-6">
         <div className="text-center mb-10 sm:mb-14">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-[var(--font-heading)] font-bold text-primary mb-3">Industries We Serve</h2>
           <p className="text-gray-600 text-sm sm:text-base max-w-3xl mx-auto">Our pest management services at Nextal Pest Control extend across a diverse range of industries throughout Dubai. Whether you are a homeowner seeking protection from household pests or a business owner maintaining a clean and compliant environment — we’ve got you covered.</p>

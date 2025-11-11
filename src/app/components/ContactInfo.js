@@ -46,8 +46,8 @@ const ContactInfo = () => {
   );
 
   return (
-    <section className="py-8 md:py-12 px-1 sm:px-6 lg:px-8 bg-secondary">
-      <div className="mx-auto  space-y-8 md:space-y-16">
+    <section className="py-8 md:py-12 px-6 lg:px-8 bg-secondary ">
+      <div className="mx-auto max-w-7xl space-y-8 md:space-y-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {infoList.map((item, index) => (
             <InfoCard key={index} icon={item.icon} title={item.title} text={item.text} />

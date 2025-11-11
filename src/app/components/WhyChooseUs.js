@@ -62,7 +62,7 @@ export default function WhyChooseUs() {
 
   return (
     <section className="py-20 bg-secondary">
-      <div className="max-w-6xl mx-auto px-2 md:px-6">
+      <div className="max-w-7xl mx-auto  md:px-6 px-6">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-primary">
           Why Choose Us?

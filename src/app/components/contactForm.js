@@ -19,7 +19,7 @@ const ContactForm = () => {
   });
 
   return (
-    <form onSubmit={formik.handleSubmit} className=" mx-auto p-6 bg-secondary rounded-lg shadow-md">
+    <form onSubmit={formik.handleSubmit} className="w-full mx-auto p-6 bg-secondary rounded-lg shadow-md">
       <h2 className="text-2xl font-semibold mb-6 text-primary font-heading">Contact Us</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
