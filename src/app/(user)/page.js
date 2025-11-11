@@ -19,7 +19,7 @@ export default function Home() {
     <Pests/>
     <ServiceCategories/>
     <CoreServices/> 
-    <GoogleReviews/>
+    {/* <GoogleReviews/> */}
     <Clients/>
     <ServiceAreasPage/>
     <WhyChooseUs/>

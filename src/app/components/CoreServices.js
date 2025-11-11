@@ -58,34 +58,111 @@ const coreServices = [
   };
 
   return (
-    <section className="bg-black mx-auto w-custom text-white py-12 sm:py-16 lg:py-20">
-      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-14">
-          <motion.h1 variants={fadeUp} className="text-3xl sm:text-5xl font-bold mb-4 text-primary font-[var(--font-heading)]">Core Services</motion.h1>
-          <motion.p variants={fadeUp} custom={1} className="text-white max-w-2xl mx-auto font-[var(--font-body)]">We offer reliable pest management solutions for homes, businesses, and industries — tailored to your specific needs and delivered by certified professionals.</motion.p>
-        </motion.div>
-        {coreServices.map((service, index) => (
-          <motion.div key={index} initial="hidden" whileInView="visible" viewport={{ once: true }} className={`grid lg:grid-cols-2 gap-12 items-center mb-12 ${index % 2 === 1 ? "lg:[&>div:first-child]:order-2" : ""}`}>
-            <motion.div variants={fadeUp} className="relative rounded-2xl overflow-hidden shadow-lg">
-              <motion.div initial={{ scale: 0.95, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} transition={{ duration: 0.8, ease: "easeOut" }} viewport={{ once: true }}>
-                <Image src={service.image} alt={service.title} width={600} height={400} className="w-full h-full object-cover" priority />
-              </motion.div>
-            </motion.div>
-            <motion.div variants={fadeUp} custom={1} className="px-2 sm:px-6">
-              <motion.h2 variants={fadeUp} custom={0.2} className="text-2xl font-bold text-accent mb-3 font-[var(--font-heading)]">{service.title}</motion.h2>
-              <motion.p variants={fadeUp} custom={0.4} className="text-white mb-6 leading-relaxed font-[var(--font-body)]">{service.description}</motion.p>
-              <motion.ul initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-2 mb-3">
-                {service.points.map((point, i) => (
-                  <motion.li key={i} variants={fadeUp} custom={i * 0.2} className="flex items-start text-white font-[var(--font-body)]">
-                    <CheckCircle size={18} className="text-success mt-1 mr-2 flex-shrink-0" />
-                    {point}
-                  </motion.li>
-                ))}
-              </motion.ul>
-            </motion.div>
+   <section className="bg-black mx-auto w-full max-w-[var(--width-custom)] text-white py-10 xs:py-12 sm:py-16 lg:py-20 3xl:py-24">
+  <div className="mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
+    
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="text-center mb-10 sm:mb-14"
+    >
+      <motion.h1
+        variants={fadeUp}
+        className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-primary font-[var(--font-heading)]"
+      >
+        Core Services
+      </motion.h1>
+      <motion.p
+        variants={fadeUp}
+        custom={1}
+        className="text-white text-sm xs:text-base sm:text-lg max-w-2xl mx-auto font-[var(--font-body)] leading-relaxed"
+      >
+        We offer reliable pest management solutions for homes, businesses, and industries — tailored to your specific needs and delivered by certified professionals.
+      </motion.p>
+    </motion.div>
+
+    {/* Services Grid */}
+    {coreServices.map((service, index) => (
+      <motion.div
+        key={index}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className={`grid gap-8 sm:gap-10 lg:gap-12 items-center mb-10 sm:mb-16 ${
+          index % 2 === 1 ? "lg:[&>div:first-child]:order-2" : ""
+        } lg:grid-cols-2`}
+      >
+        {/* Image */}
+        <motion.div
+          variants={fadeUp}
+          className="relative rounded-2xl overflow-hidden shadow-lg w-full h-[220px] xs:h-[280px] sm:h-[350px] lg:h-[400px]"
+        >
+          <motion.div
+            initial={{ scale: 0.95, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <Image
+              src={service.image}
+              alt={service.title}
+              width={600}
+              height={400}
+              className="w-full h-full object-cover"
+              priority
+            />
           </motion.div>
-        ))}
-      </div>
-    </section>
+        </motion.div>
+
+        {/* Text Content */}
+        <motion.div
+          variants={fadeUp}
+          custom={1}
+          className="px-1 xs:px-2 sm:px-4 lg:px-6"
+        >
+          <motion.h2
+            variants={fadeUp}
+            custom={0.2}
+            className="text-xl xs:text-2xl sm:text-3xl font-bold text-accent mb-3 font-[var(--font-heading)]"
+          >
+            {service.title}
+          </motion.h2>
+          <motion.p
+            variants={fadeUp}
+            custom={0.4}
+            className="text-white text-sm xs:text-base sm:text-lg mb-6 leading-relaxed font-[var(--font-body)]"
+          >
+            {service.description}
+          </motion.p>
+
+          {/* List Points */}
+          <motion.ul
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="space-y-2 mb-3"
+          >
+            {service.points.map((point, i) => (
+              <motion.li
+                key={i}
+                variants={fadeUp}
+                custom={i * 0.2}
+                className="flex items-start text-white text-sm xs:text-base font-[var(--font-body)]"
+              >
+                <CheckCircle
+                  size={18}
+                  className="text-success mt-1 mr-2 flex-shrink-0"
+                />
+                {point}
+              </motion.li>
+            ))}
+          </motion.ul>
+        </motion.div>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
   );
 }
