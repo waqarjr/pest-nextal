@@ -15,8 +15,8 @@ const Methods = ({data}) => {
   
 
   return (
-      <section className="py-20 px-6 md:px-12 bg-secondary">
-        <div className="w-custom mx-auto text-center">
+      <section className="py-20 px-6 w-custom md:px-12 mx-auto bg-secondary">
+        <div className="  text-center">
           <motion.h2 variants={fadeUp} initial="hidden" animate="visible" custom={1} className="text-3xl md:text-4xl font-bold text-primary mb-6" >
             {data.heading}
           </motion.h2>
@@ -27,7 +27,7 @@ const Methods = ({data}) => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {data.details.map((data, i) => (
               <motion.div key={i} variants={fadeUp} initial="hidden" animate="visible" custom={i * 0.3}
-                className="bg-secondary rounded-xl p-6 shadow-md  hover:shadow-lg transition-all duration-200">
+                className="bg-white rounded-xl p-6 shadow-md  hover:shadow-lg transition-all duration-200">
                 {data.icon}
                 <h3 className="text-xl font-semibold text-primary mb-2">
                   {data.title}

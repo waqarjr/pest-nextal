@@ -1,7 +1,7 @@
 export const Herosection = {
   "cockroaches-pest-control": {
     heading: "Cockroaches",
-    image: "https://robinpestcontrol.com/wp-content/uploads/2023/05/cockroaches-pest-control.jpeg",
+    image: "/assets/cockroaches/night-cockroaches.webp",
     listing : [ "Municipality Approved Company","Professional and Skilled Team","Warranty & Follow Up Service","Outstanding Service Reputation in Dubai","Quick Response - 24x7 Availability"]
   },
   "ants-pest-control-2":{
@@ -44,8 +44,8 @@ export const Herosection = {
     image: "/assets/flies/fly-bg2.jpeg",
     listing : [ "Municipality Approved Company","Professional and Skilled Team","Warranty & Follow Up Service","Outstanding Service Reputation in Dubai","Quick Response - 24x7 Availability"]
   },
-  "mosquito-pest-control": {
-    heading: "Mosquito ",
+  "mosquitoes-pest-control": {
+    heading: "Mosquitoes",
     image: "/assets/mosquito/mosquito-bg.avif",
     listing : [ "Municipality Approved Company","Professional and Skilled Team","Warranty & Follow Up Service","Outstanding Service Reputation in Dubai","Quick Response - 24x7 Availability"]
   },
@@ -70,59 +70,59 @@ export const Herosection = {
     listing : [ "Municipality Approved Company","Professional and Skilled Team","Warranty & Follow Up Service","Outstanding Service Reputation in Dubai","Quick Response - 24x7 Availability"]
   },
   "birds-control-deterrent-service":{
-    heading: "Cockroaches",
-    image: "https://robinpestcontrol.com/wp-content/uploads/2023/05/cockroaches-pest-control.jpeg",
+    heading: "Birds",
+    image: "/assets/birds/birds-bg.jpg",
     listing : [ "Municipality Approved Company","Professional and Skilled Team","Warranty & Follow Up Service","Outstanding Service Reputation in Dubai","Quick Response - 24x7 Availability"]
   },
   "bees-pest-control":{
-    heading: "Cockroaches",
-    image: "https://robinpestcontrol.com/wp-content/uploads/2023/05/cockroaches-pest-control.jpeg",
+    heading: "Bees",
+    image: "/assets/bees/bees-bg.jpg",
     listing : [ "Municipality Approved Company","Professional and Skilled Team","Warranty & Follow Up Service","Outstanding Service Reputation in Dubai","Quick Response - 24x7 Availability"]
   },
   "wild-life-pest-control":{
-    heading: "Cockroaches",
-    image: "https://robinpestcontrol.com/wp-content/uploads/2023/05/cockroaches-pest-control.jpeg",
+    heading: "Wild Life",
+    image: "/assets/wildlife/bg-wildlife.jpg",
     listing : [ "Municipality Approved Company","Professional and Skilled Team","Warranty & Follow Up Service","Outstanding Service Reputation in Dubai","Quick Response - 24x7 Availability"]
   },
   "bedbugs-pest-control": {
-    heading: "Bed Bugs Pest Control",
-    image: "https://robinpestcontrol.com/wp-content/uploads/2023/05/bedbugs-pest-control.jpeg",
+    heading: "Bed Bugs ",
+    image: "/assets/bedbug/Bedbug-c.webp",
     listing : [ "Municipality Approved Company","Professional and Skilled Team","Warranty & Follow Up Service","Outstanding Service Reputation in Dubai","Quick Response - 24x7 Availability"]
 
   },
   "fleas-pest-control-2":{
-    heading: "Cockroaches",
-    image: "https://robinpestcontrol.com/wp-content/uploads/2023/05/cockroaches-pest-control.jpeg",
+    heading: "Fleas",
+    image: "/assets/fleas/flea-home.jpg",
     listing : [ "Municipality Approved Company","Professional and Skilled Team","Warranty & Follow Up Service","Outstanding Service Reputation in Dubai","Quick Response - 24x7 Availability"]
   },
   "ticks-pest-control-2":{
-    heading: "Cockroaches",
-    image: "https://robinpestcontrol.com/wp-content/uploads/2023/05/cockroaches-pest-control.jpeg",
+    heading: "Ticks",
+    image: "/assets/ticks/ticks-bg.webp",
     listing : [ "Municipality Approved Company","Professional and Skilled Team","Warranty & Follow Up Service","Outstanding Service Reputation in Dubai","Quick Response - 24x7 Availability"]
   },
   "sanitization-and-disinfection":{
-    heading: "Cockroaches",
-    image: "https://robinpestcontrol.com/wp-content/uploads/2023/05/cockroaches-pest-control.jpeg",
+    heading: "Professional",
+    image: "/assets/sanitization/bg8.jpg",
     listing : [ "Municipality Approved Company","Professional and Skilled Team","Warranty & Follow Up Service","Outstanding Service Reputation in Dubai","Quick Response - 24x7 Availability"]
   },
   "residential-pest-control":{
-    heading: "Cockroaches",
-    image: "https://robinpestcontrol.com/wp-content/uploads/2023/05/cockroaches-pest-control.jpeg",
+    heading: "Residential",
+    image: "/assets/residential/home-pest-control.png",
     listing : [ "Municipality Approved Company","Professional and Skilled Team","Warranty & Follow Up Service","Outstanding Service Reputation in Dubai","Quick Response - 24x7 Availability"]
   },
   "commercial-pest-control":{
-    heading: "Cockroaches",
-    image: "https://robinpestcontrol.com/wp-content/uploads/2023/05/cockroaches-pest-control.jpeg",
+    heading: "Commercial",
+    image: "/assets/commercial/commercial-bg.jpg",
     listing : [ "Municipality Approved Company","Professional and Skilled Team","Warranty & Follow Up Service","Outstanding Service Reputation in Dubai","Quick Response - 24x7 Availability"]
   },
   "industrial-pest-control":{
-    heading: "Cockroaches",
-    image: "https://robinpestcontrol.com/wp-content/uploads/2023/05/cockroaches-pest-control.jpeg",
+    heading: "Industrial",
+    image: "/assets/industrial/industrial3.png",
     listing : [ "Municipality Approved Company","Professional and Skilled Team","Warranty & Follow Up Service","Outstanding Service Reputation in Dubai","Quick Response - 24x7 Availability"]
   },
   "general-pest-control":{
-    heading: "Cockroaches",
-    image: "https://robinpestcontrol.com/wp-content/uploads/2023/05/cockroaches-pest-control.jpeg",
+    heading: "General",
+    image: "/assets/industrial/industrial3.png",
     listing : [ "Municipality Approved Company","Professional and Skilled Team","Warranty & Follow Up Service","Outstanding Service Reputation in Dubai","Quick Response - 24x7 Availability"]
   },
 };

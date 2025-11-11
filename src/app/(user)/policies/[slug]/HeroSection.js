@@ -15,7 +15,7 @@ const HeroSection = ({data}) => {
   };
 
   return (<>
-  <section className="flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-12 py-16 sm:py-20 lg:py-24 bg-secondary shadow-sm">
+  <section className="w-custom mx-auto flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-12 py-16 sm:py-20 lg:py-24 bg-secondary ">
   <motion.h1 variants={fadeUp} initial="hidden" animate="visible" custom={1} className="text-4xl md:text-5xl font-extrabold text-primary mb-4 font-[var(--font-heading)]">
     {data.heading}
   </motion.h1>

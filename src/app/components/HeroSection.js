@@ -63,18 +63,20 @@ const HeroSection = () => {
               <h2 className="text-3xl lg:text-4xl font-bold text-black mb-3 font-[var(--font-heading)]">Pest Control, Disinfection & Sanitization Services</h2>
               <p className="text-base lg:text-lg text-black leading-relaxed font-[var(--font-body)]">Robin Pest Control is committed to ensuring your home and business remains free from pests. Our team of expert and well-trained pest control technicians ensures optimal and clean surroundings for you and your family. RPC helps customers in getting rid of Bed Bugs, Termites, Cockroaches, Rodents, Bees, and more.</p>
             </motion.div>
-            <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={2} className="flex flex-col sm:flex-row gap-4">
-              <motion.a href={`tel:${process.env.NEXT_PUBLIC_AUTH_PHONE_NUMBER}`} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-primary hover:bg-[#6B0F2A] text-white px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-all shadow-lg hover:shadow-xl font-[var(--font-body)]">
-                <Phone className="w-5 h-5" />
-                <span>{process.env.NEXT_PUBLIC_AUTH_PHONE_NUMBER}</span>
+            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
+              <motion.a href={`tel:${process.env.NEXT_PUBLIC_AUTH_PHONE_NUMBER}`} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} 
+              className="bg-primary hover:bg-[#6B0F2A] text-white px-5 sm:px-3 lg:px-4 py-2 lg:py-2 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-all shadow-lg hover:shadow-xl font-[var(--font-body)]">
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="text-sm sm:text-base">{process.env.NEXT_PUBLIC_AUTH_PHONE_NUMBER}</span>
               </motion.a>
-              <motion.a href={`https://wa.me/${process.env.NEXT_PUBLIC_AUTH_WHATS_NUBER}`} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-success hover:bg-[#218838] text-white px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-all shadow-lg hover:shadow-xl font-[var(--font-body)]">
-                <MessageCircle className="w-5 h-5" />
-                <span>WhatsApp</span>
+              <motion.a href={`https://wa.me/${process.env.NEXT_PUBLIC_AUTH_WHATS_NUBER}`} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} 
+              className="bg-success hover:bg-[#218838] text-white px-5 sm:px-3 lg:px-4 py-2 lg:py-2  rounded-lg font-semibold flex items-center justify-center space-x-2 transition-all shadow-lg hover:shadow-xl font-[var(--font-body)]">
+                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="text-sm sm:text-base">WhatsApp</span>
               </motion.a>
-              <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-primary hover:border-accent text-primary hover:text-accent px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-all bg-white hover:bg-secondary font-[var(--font-body)]">
-                <span>Free Quote</span>
-                <ArrowRight className="w-5 h-5" />
+              <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-primary hover:border-accent text-primary hover:text-accent px-5 sm:px-3 lg:px-4 py-2 lg:py-2  rounded-lg font-semibold flex items-center justify-center space-x-2 transition-all bg-white hover:bg-secondary font-[var(--font-body)]">
+                <span className="text-sm sm:text-base">Free Quote</span>
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </motion.button>
             </motion.div>
           </div>

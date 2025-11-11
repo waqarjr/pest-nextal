@@ -58,7 +58,7 @@ export default function ServiceAreasPage() {
   ];
 
   return (
-    <main className="py-6 w-custom mx-auto bg-secondary" >
+    <main className="py-6 mt-4 w-custom mx-auto bg-secondary" >
       {/* Hero */}
       <section className=" mx-auto px-6 text-center mb-10">
         <h1 className="text-4xl md:text-5xl font-bold text-primary" >

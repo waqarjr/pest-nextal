@@ -6,7 +6,6 @@ import { CheckCircle, Phone, MessageCircle, ArrowRight } from "lucide-react";
 
 const CrawlingHero = ({pest}) => {
 
-
   const container = { hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.2 } } };
   const fadeUp = { hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } } };
 
@@ -49,8 +48,8 @@ const CrawlingHero = ({pest}) => {
           </motion.div>
 
           <motion.div variants={fadeUp} className="relative flex justify-center lg:justify-end items-center order-1 lg:order-2">
-            <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="relative w-full max-w-[450px] sm:max-w-[500px] lg:max-w-[520px] aspect-[4/3] sm:aspect-[5/4] lg:aspect-[4/3]">
-              <Image src={pest.image} alt="Professional pest control service in Dubai" fill className="object-cover " priority sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 520px" />
+            <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="relative w-full max-w-[450px] sm:max-w-[500px] lg:max-w-[520px] aspect-[4/3] sm:aspect-[5/4] lg:aspect-[4/3] ">
+              <Image src={pest.image} alt="Professional pest control service in Dubai" fill className="object-cover rounded-2xl" priority sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 520px" />
             </motion.div>
           </motion.div>
 

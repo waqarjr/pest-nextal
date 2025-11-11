@@ -17,7 +17,7 @@ export default function Home() {
     <AboutCompany/>
     <Pests/>
     <ServiceCategories/>
-    <CoreServices/>
+    <CoreServices/> 
     <Clients/>
     <ServiceAreasPage/>
     <WhyChooseUs/>
