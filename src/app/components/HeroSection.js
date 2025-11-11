@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, MessageCircle, ArrowRight } from 'lucide-react';
-
+import Image from 'next/image';
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [touchStart, setTouchStart] = useState(0);
@@ -89,7 +89,7 @@ const HeroSection = () => {
                 
                 return (
                   <div key={index} className={`absolute  inset-0 transition-all duration-1000 ease-in-out ${isActive ? 'translate-x-0 opacity-100 z-10' : isPrev ? '-translate-x-full opacity-0 z-0' : isNext ? 'translate-x-full opacity-0 z-0' : 'translate-x-full opacity-0 z-0'}`}>
-                    <img src={image} alt={`Pest control service ${index + 1}`} className="w-full h-full object-cover pointer-events-none select-none" />
+                    <Image src={image} alt={`Pest control service ${index + 1}`} fill className="w-full h-full object-cover pointer-events-none select-none" />
                   </div>
                 );
               })}

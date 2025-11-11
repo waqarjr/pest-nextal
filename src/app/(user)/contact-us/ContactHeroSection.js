@@ -46,7 +46,7 @@ const ContactHeroSection = () => {
             
             <motion.h1 variants={fadeUp} custom={1} className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight font-[var(--font-heading)]">
               Need Expert Pest Control?
-              <span className="block text-accent mt-2">We're Here to Help!</span>
+              <span className="block text-accent mt-2">We&apos;re Here to Help!</span>
             </motion.h1>
             
             <motion.p variants={fadeUp} custom={2} className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-[var(--font-body)]">

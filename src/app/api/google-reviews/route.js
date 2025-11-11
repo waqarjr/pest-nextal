@@ -8,7 +8,7 @@ export async function GET(req) {
   try {
     // Check if API key exists
     if (!GOOGLE_API_KEY) {
-      console.error("❌ GOOGLE_API_KEY not found in environment variables");
+      console.error(" GOOGLE_API_KEY not found in environment variables");
       return NextResponse.json(
         { reviews: [], error: "Google API key not configured" },
         { status: 500 }
@@ -17,7 +17,7 @@ export async function GET(req) {
 
     // Check if Place ID exists
     if (!GOOGLE_PLACE_ID) {
-      console.error("❌ GOOGLE_PLACE_ID not found in environment variables");
+      console.error(" GOOGLE_PLACE_ID not found in environment variables");
       return NextResponse.json(
         { reviews: [], error: "Google Place ID not configured" },
         { status: 500 }
@@ -27,7 +27,6 @@ export async function GET(req) {
     // Make request to Google Places API
     const googleApiUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${GOOGLE_PLACE_ID}&fields=name,rating,reviews,user_ratings_total&key=${GOOGLE_API_KEY}`;
     
-    console.log("🔍 Fetching Google reviews from:", googleApiUrl.replace(GOOGLE_API_KEY, "***"));
 
     const res = await fetch(googleApiUrl, {
       method: "GET",
@@ -44,7 +43,7 @@ export async function GET(req) {
     const data = await res.json();
 
     if (data.status !== "OK") {
-      console.error("❌ Google API error:", data.status, data.error_message);
+      console.error("Google API error:", data.status, data.error_message);
       return NextResponse.json(
         { 
           reviews: [], 
@@ -57,7 +56,7 @@ export async function GET(req) {
 
     // Check if reviews exist
     if (!data.result?.reviews || data.result.reviews.length === 0) {
-      console.log("⚠️ No reviews found in Google API response");
+      console.log(" No reviews found in Google API response");
       return NextResponse.json({ 
         reviews: [],
         result: data.result ? {
@@ -68,7 +67,7 @@ export async function GET(req) {
       });
     }
 
-    console.log("✅ Successfully fetched", data.result.reviews.length, "reviews");
+    console.log("Successfully fetched", data.result.reviews.length, "reviews");
 
     return NextResponse.json({ 
       reviews: data.result.reviews,
@@ -85,7 +84,7 @@ export async function GET(req) {
       },
     });
   } catch (error) {
-    console.error("❌ Error fetching Google reviews:", error);
+    console.error("Error fetching Google reviews:", error);
     return NextResponse.json(
       { reviews: [], error: error.message || "Failed to fetch reviews" },
       { status: 500 }

@@ -1,6 +1,7 @@
 'use client'
-import { ShieldCheck, SprayCan, Leaf, Search, Wrench, AlertTriangle, Building2, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import Image from "next/image";
 
  const ExpertTeam = ({data}) => {
 
@@ -38,7 +39,7 @@ import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
               </div>
               {/* Image */}
               <div>
-                <img src={item.image} alt={item.title} className="rounded-2xl shadow-lg object-cover w-full h-64 sm:h-80 md:h-96" />
+                <Image src={item.image} alt={item.title}  width={256} height={0} className="rounded-2xl shadow-lg object-cover w-full h-64 sm:h-80 md:h-96" />
               </div>
             </div>
           ))}

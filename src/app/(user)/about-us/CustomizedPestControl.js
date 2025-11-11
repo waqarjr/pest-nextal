@@ -19,7 +19,7 @@ const CustomizedPestControl = () => {
           <div className="space-y-6 sm:space-y-8">
             <div>
               <span className="text-accent font-semibold text-sm uppercase tracking-wide font-[var(--font-heading)]">CUSTOMIZED PEST CONTROL</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-6 font-[var(--font-heading)]">Tailored to Your Home's Specific Needs</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-6 font-[var(--font-heading)]">Tailored to Your Home&apos;s Specific Needs</h2>
               <p className="text-black text-base sm:text-lg leading-relaxed mb-6 font-[var(--font-body)]">At Nextal Pest Control, we use modern tools, clear reports, and smart plans to stop pests before they become a problem. Our team watches for pest activity and acts quickly to protect your home for a long time.</p>
               <p className="text-black text-base sm:text-lg leading-relaxed font-[var(--font-body)]">We also give you simple reports and helpful tips made for your home. This way, you understand what we do and how you can help keep your place safe and free from pests.</p>
             </div>
@@ -80,7 +80,7 @@ const CustomizedPestControl = () => {
             <div className="space-y-4 sm:space-y-5 order-1 md:order-2 text-center md:text-left">
                 <div className="inline-flex items-center px-2.5 sm:px-3 py-1 rounded-full bg-accent/10 text-accent text-xs sm:text-sm font-medium font-[var(--font-heading)]">About Us</div>
                 <h2 className="mt-10 text-xl sm:text-3xl lg:text-4xl font-bold text-primary leading-snug font-[var(--font-heading)]">Your Trusted 24-Hour Pest Control Experts</h2>
-                <p className="text-sm sm:text-base md:text-lg text-black leading-relaxed font-[var(--font-body)]">At Nextal Pest Control, we are here to help keep homes and businesses across Dubai free from unwanted pests quickly, safely, and with lasting results. Our team takes real pride in the trust we've built, the honest work we do, and the satisfaction of every customer we serve.</p>
+                <p className="text-sm sm:text-base md:text-lg text-black leading-relaxed font-[var(--font-body)]">At Nextal Pest Control, we are here to help keep homes and businesses across Dubai free from unwanted pests quickly, safely, and with lasting results. Our team takes real pride in the trust we&apos;ve built, the honest work we do, and the satisfaction of every customer we serve.</p>
                 <div className="flex flex-row justify-center md:justify-start gap-3 sm:gap-4">
                 <a href={`tel:${process.env.NEXT_PUBLIC_AUTH_PHONE_NUMBER}`} className="inline-flex items-center justify-center rounded-lg bg-primary hover:bg-[#6B0F2A] px-5 sm:px-6 py-3 text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto font-[var(--font-body)]">
                     <Phone className="w-4 h-4 mr-2" />

@@ -61,7 +61,7 @@ const ReviewCard = ({ review }) => {
       <div className="flex items-center justify-between mb-3 sm:mb-4">
         <div className="flex items-center space-x-2 sm:space-x-3">
           {review.profile_photo_url && !imgError ? (
-            <img src={review.profile_photo_url} alt={review.author_name} width={40} height={40} className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover" onError={() => setImgError(true)} />
+            <Image src={review.profile_photo_url} alt={review.author_name} width={40} height={40} className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover" onError={() => setImgError(true)} />
           ) : (
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-200 flex items-center justify-center">
               <User className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500" />
