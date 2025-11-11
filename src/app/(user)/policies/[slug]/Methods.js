@@ -15,7 +15,7 @@ const Methods = ({data}) => {
   
 
   return (
-      <section className="py-20 px-6 w-custom md:px-12 mx-auto bg-secondary">
+      <section className="py-20 px-6 max-w-7xl md:px-12 mx-auto bg-secondary">
         <div className="  text-center">
           <motion.h2 variants={fadeUp} initial="hidden" animate="visible" custom={1} className="text-3xl md:text-4xl font-bold text-primary mb-6" >
             {data.heading}

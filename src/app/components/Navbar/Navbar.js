@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <motion.nav initial={!hasAnimated.current ? { y: -60, opacity: 0 } : false} animate={!hasAnimated.current ? { y: 0, opacity: 1 } : false} transition={{ duration: 0.5, ease: "easeOut" }} onAnimationComplete={() => (hasAnimated.current = true)} className={`bg-secondary sticky top-0 z-50 transition-shadow duration-300 font-[var(--font-body)] ${scrolled ? "shadow-lg" : "shadow-md"}`}>
-      <div className="w-11/12 max-w-7xl mx-auto flex justify-between items-center h-20 sm:h-24 px-4 sm:px-6 lg:px-8">
+      <div className="w-11/12 max-w-7xl mx-auto flex justify-between items-center h-24 px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0 flex items-center"><Image src="/assets/Nextal-logo.png" alt="Nextal Logo" priority width={130} height={40} className="object-contain w-24 md:w-28" /></Link>
 

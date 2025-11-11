@@ -85,7 +85,7 @@ export default function GoogleReviews() {
   if (!mounted)
     return (
       <section className="py-12 sm:py-20 px-4 sm:px-6 bg-secondary">
-        <div className="w-custom mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-primary mb-2 font-[var(--font-heading)]">What Our Customers Say</h2>
             <p className="text-black text-sm sm:text-md font-[var(--font-body)]">Real reviews from our happy clients</p>
@@ -96,7 +96,7 @@ export default function GoogleReviews() {
 
   return (
     <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-secondary">
-      <div className="w-custom mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-primary mb-2 font-[var(--font-heading)]">What Our Customers Say</h2>
           <p className="text-black text-sm sm:text-base font-[var(--font-body)]">Real reviews from our happy clients</p>

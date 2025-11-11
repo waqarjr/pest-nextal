@@ -20,7 +20,7 @@ const Footer = () => {
     <footer className="bg-secondary pt-12 md:pt-20 pb-6 border-t border-black/10 px-4 md:px-8 font-body text-sm text-black">
       <div className="mx-auto w-full max-w-7xl grid gap-8 sm:gap-10 md:grid-cols-5">
         {/* Logo + About */}
-        <div className="text-center md:text-left space-y-4 md:-translate-y-10">
+        <div className="text-center md:text-left space-y-9 md:-translate-y-10">
           <Link href="/" className="inline-block">
             <Image src="/assets/Nextal-logo.png" alt="Nextal Pests" width={140} height={50} className="w-28 h-auto sm:w-32 lg:w-36 mx-auto md:mx-0" />
           </Link>

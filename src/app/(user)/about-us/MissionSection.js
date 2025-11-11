@@ -10,7 +10,7 @@ export default function MissionSection() {
 
   return (
     <section className="py-16 sm:py-20 bg-secondary">
-      <div className="w-custom mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-semibold text-primary font-[var(--font-heading)]">OUR MISSION</h2>
           <p className="mt-4 text-black max-w-3xl mx-auto font-[var(--font-body)]">At <span className="font-semibold text-accent">Nextal Pest Control Dubai</span>, our mission is to make every home and business pest-free through safe, sustainable, and professional pest management solutions. We combine innovation, integrity, and eco-friendly practices to protect your environment and your peace of mind.</p>
