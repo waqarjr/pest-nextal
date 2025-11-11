@@ -11,11 +11,11 @@ const ContactHeroSection = () => {
     visible: (i = 1) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.6, ease: "easeOut" } })
   };
 
-  const phone = process.env.NEXT_PUBLIC_AUTH_PHONE_NUMBER || "+92 315 6417097";
-  const email = process.env.NEXT_PUBLIC_AUTH_EMAIL || "waqarjr03@gmail.com";
-  const address = process.env.NEXT_PUBLIC_AUTH_ADDRESS || "Nextal Pests Control LLC, Dubai";
-  const workingHours = process.env.NEXT_PUBLIC_AUTH_TIME || "24/7 Emergency Service";
-  const whatsappNumber = process.env.NEXT_PUBLIC_AUTH_WHATS_NUBER || "923156417097";
+  const phone = process.env.NEXT_PUBLIC_AUTH_PHONE_NUMBER ;
+  const email = process.env.NEXT_PUBLIC_AUTH_EMAIL ;
+  const address = process.env.NEXT_PUBLIC_AUTH_ADDRESS ;
+  const workingHours = process.env.NEXT_PUBLIC_AUTH_TIME ;
+  const whatsappNumber = process.env.NEXT_PUBLIC_AUTH_WHATS_NUBER ;
 
   const phoneClean = phone.replace(/\s+/g, '');
 

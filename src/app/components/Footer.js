@@ -74,9 +74,12 @@ const Footer = () => {
         <div>
           <p className="font-semibold text-primary mb-4">Contact Us</p>
           <ul className="space-y-3 text-black/70">
-            <li className="flex items-start gap-2 sm:gap-3"><Mail className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" /><a href="mailto:info@nextalpestcontrol.com" className="hover:text-accent transition-colors break-words text-xs sm:text-sm">info@nextalpestcontrol.com</a></li>
-            <li className="flex items-start gap-2 sm:gap-3"><Phone className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" /><a href="tel:+971503848713" className="hover:text-accent transition-colors text-xs sm:text-sm">+971 50 384 8713</a></li>
-            <li className="flex items-start gap-2 sm:gap-3"><Phone className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" /><a href="tel:+97148842612" className="hover:text-accent transition-colors text-xs sm:text-sm">+971 4 884 2612</a></li>
+            <li className="flex items-start gap-2 sm:gap-3"><Mail className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+            <a href={`mailto:${process.env.NEXT_PUBLIC_AUTH_EMAIL}`} className="hover:text-accent transition-colors break-words text-xs sm:text-sm">{process.env.NEXT_PUBLIC_AUTH_EMAIL}</a></li>
+            <li className="flex items-start gap-2 sm:gap-3"><Phone className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+            <a href={`tel:${process.env.NEXT_PUBLIC_AUTH_PHONE_NUMBER}`} className="hover:text-accent transition-colors text-xs sm:text-sm">{process.env.NEXT_PUBLIC_AUTH_PHONE_NUMBER}</a></li>
+            <li className="flex items-start gap-2 sm:gap-3"><Phone className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+            <a href={`tel:${process.env.NEXT_PUBLIC_AUTH_PHONE_NUMBER}`} className="hover:text-accent transition-colors text-xs sm:text-sm">{process.env.NEXT_PUBLIC_AUTH_PHONE_NUMBER}</a></li>
           </ul>
         </div>
       </div>

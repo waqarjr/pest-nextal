@@ -59,56 +59,70 @@ const servicesData = [
 
 export default function ServiceCategories() {
   return (
-    <section className="bg-secondary py-16 mt-10  overflow-hidden w-custom mx-auto">
-      <div className="max-w-4xl mx-auto text-center px-4 md:px-6">
-        <h2 className="text-3xl sm:text-5xl font-bold text-primary mb-4 font-[var(--font-heading)]">Detailed Service Categories</h2>
-        <p className="text-black mb-12 font-[var(--font-body)]">Our comprehensive pest control services are organized by pest type and behavior, ensuring targeted and effective treatments for every situation.</p>
-      </div>
-      <div className="space-y-10 md:space-y-15">
-        {servicesData.map((category, index) => (
-          <div key={index} className={`grid lg:grid-cols-2 gap-10 items-center w-full ${index % 2 === 1 ? "lg:[&>div:first-child]:order-2" : ""}`}>
-            <div className="relative w-full h-[350px] md:h-[450px] rounded-2xl overflow-hidden">
-              <Image src={category.image} alt={category.title} fill className="object-cover rounded-2xl" priority />
-              <div className="absolute inset-0 bg-black/20"></div>
-            </div>
-            <div className="px-6 md:px-16">
-              <h2 className="text-2xl font-bold text-primary mb-3 font-[var(--font-heading)]">{category.title}</h2>
-              <p className="text-black mb-6 font-[var(--font-body)]">{category.description}</p>
-              <div className="grid sm:grid-cols-2 gap-6">
-                {category.services.map((service, idx) => (
-                  <div key={idx} className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
-                    <h3 className="font-semibold text-black mb-3 font-[var(--font-heading)]">{service.name}</h3>
-                    <ul className="space-y-2 text-black text-sm font-[var(--font-body)]">
-                      {service.points.map((point, i) => (
-                        <li key={i} className="flex items-center">
-                          <CheckCircle size={14} className="text-success mr-2 flex-shrink-0" />
-                          {point}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+   <section className="bg-secondary py-12 sm:py-16 mt-10 overflow-hidden w-custom max-w-[var(--width-custom)] mx-auto">
+  <div className="max-w-4xl mx-auto text-center px-3 sm:px-5 md:px-6">
+    <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-3 sm:mb-4 font-[var(--font-heading)]">Detailed Service Categories</h2>
+    <p className="text-black text-sm sm:text-base mb-8 sm:mb-12 font-[var(--font-body)]">
+      Our comprehensive pest control services are organized by pest type and behavior, ensuring targeted and effective treatments for every situation.
+    </p>
+  </div>
+
+  <div className="space-y-8 sm:space-y-10 md:space-y-14">
+    {servicesData.map((category, index) => (
+      <div key={index} className={`grid gap-6 sm:gap-10 items-center w-full lg:grid-cols-2 ${index % 2 === 1 ? "lg:[&>div:first-child]:order-2" : ""}`}>
+        {/* 🖼️ Image Container */}
+        <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] md:aspect-[5/3] lg:aspect-[16/7] rounded-2xl overflow-hidden">
+          <Image src={category.image} alt={category.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover object-center rounded-2xl" priority />
+          <div className="absolute inset-0 bg-black/25 sm:bg-black/20"></div>
+        </div>
+
+        {/* 📄 Text Content */}
+        <div className="px-4 sm:px-6 md:px-10 lg:px-16">
+          <h2 className="text-xl sm:text-2xl font-bold text-primary mb-3 font-[var(--font-heading)]">{category.title}</h2>
+          <p className="text-black text-sm sm:text-base mb-5 sm:mb-6 font-[var(--font-body)]">{category.description}</p>
+
+          <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
+            {category.services.map((service, idx) => (
+              <div key={idx} className="bg-white rounded-xl border border-gray-100 p-4 sm:p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
+                <h3 className="font-semibold text-black mb-2 sm:mb-3 font-[var(--font-heading)]">{service.name}</h3>
+                <ul className="space-y-1.5 sm:space-y-2 text-black text-xs sm:text-sm font-[var(--font-body)]">
+                  {service.points.map((point, i) => (
+                    <li key={i} className="flex items-center">
+                      <CheckCircle size={14} className="text-success mr-2 flex-shrink-0" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
+            ))}
           </div>
-        ))}
-      </div>
-      <div className="mt-10 text-center bg-secondary p-5 rounded-2xl shadow-inner max-w-5xl mx-auto border-2 border-primary">
-        <h2 className="text-3xl font-bold text-primary mb-4 font-[var(--font-heading)]">Ready to Make Your Space Pest-Free?</h2>
-        <p className="text-black mb-8 max-w-xl mx-auto font-[var(--font-body)]">Schedule your free inspection today and let our experts handle the rest — safe, fast, and effective pest control guaranteed.</p>
-        <div className="flex flex-row justify-center items-center gap-4 pt-2">
-          <a href={`tel:${process.env.NEXT_PUBLIC_AUTH_PHONE_NUMBER}`} className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-[#6B0F2A] text-white px-6 py-3 rounded-lg transition-all duration-200 text-base font-semibold shadow-lg hover:shadow-xl font-[var(--font-body)]">
-            <Phone className="w-4 h-4" />
-            <span>{process.env.NEXT_PUBLIC_AUTH_PHONE_NUMBER}</span>
-          </a>
-          <a href={`https://wa.me/${process.env.NEXT_PUBLIC_AUTH_WHATS_NUBER}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-success hover:bg-[#218838] text-white p-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl" aria-label="Chat on WhatsApp">
-            <FaWhatsapp className="w-6 h-6" />
-          </a>
-          <a href={`mailto:${process.env.NEXT_PUBLIC_AUTH_EMAIL}`} className="inline-flex items-center justify-center bg-accent hover:bg-[#C4A20F] text-white p-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl" aria-label="Contact via Email">
-            <FaEnvelope className="w-6 h-6" />
-          </a>
         </div>
       </div>
-    </section>
+    ))}
+  </div>
+
+  {/* 📞 CTA Section */}
+  <div className="mt-10 text-center bg-secondary p-4 sm:p-5 rounded-2xl shadow-inner max-w-5xl mx-auto border-2 border-primary">
+    <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-3 sm:mb-4 font-[var(--font-heading)]">Ready to Make Your Space Pest-Free?</h2>
+    <p className="text-black text-sm sm:text-base mb-6 sm:mb-8 max-w-xl mx-auto font-[var(--font-body)]">
+      Schedule your free inspection today and let our experts handle the rest — safe, fast, and effective pest control guaranteed.
+    </p>
+
+    <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 pt-2">
+      <a href={`tel:${process.env.NEXT_PUBLIC_AUTH_PHONE_NUMBER}`} className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-[#6B0F2A] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg transition-all duration-200 text-sm sm:text-base font-semibold shadow-lg hover:shadow-xl font-[var(--font-body)]">
+        <Phone className="w-4 h-4" /><span>{process.env.NEXT_PUBLIC_AUTH_PHONE_NUMBER}</span>
+      </a>
+      <a href={`https://wa.me/${process.env.NEXT_PUBLIC_AUTH_WHATS_NUBER}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-success hover:bg-[#218838] text-white p-2.5 sm:p-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl" aria-label="Chat on WhatsApp">
+        <FaWhatsapp className="w-5 sm:w-6 h-5 sm:h-6" />
+      </a>
+      <a href={`mailto:${process.env.NEXT_PUBLIC_AUTH_EMAIL}`} className="inline-flex items-center justify-center bg-accent hover:bg-[#C4A20F] text-white p-2.5 sm:p-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl" aria-label="Contact via Email">
+        <FaEnvelope className="w-5 sm:w-6 h-5 sm:h-6" />
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
   );
 }

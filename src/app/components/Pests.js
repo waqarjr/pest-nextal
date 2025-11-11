@@ -237,50 +237,52 @@ export default function Pests() {
   };
 
   return (
-    <section ref={sectionRef} onMouseEnter={handleHoverStart} onTouchStart={handleHoverStart} className="mt-1 mx-auto w-custom px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-      <div className="relative text-center max-w-4xl mx-auto p-12 rounded-2xl overflow-hidden">
-        <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 font-[var(--font-heading)]">
-          Choose a Pest Service
-        </h2>
-      </div>
-      <motion.div className="mt-2 grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5" variants={containerVariants} initial="hidden" animate={controls}>
-        {services.map((svc, i) => (
-          <motion.div key={svc.slug} variants={itemVariants} whileHover={{ scale: 1.07, rotate: Math.random() * 2 - 1, transition: { type: "spring", stiffness: 250, damping: 15 } }} whileTap={{ scale: 0.98 }} className="relative group rounded-xl cursor-pointer">
-            <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary via-accent to-primary opacity-0 group-hover:opacity-100 blur-[2px] transition-opacity duration-500"></div>
-            <Link href={`/${svc.slug}`} className="relative flex flex-col h-[190px] items-center rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 p-6 text-white bg-black border border-gray-800 hover:border-primary overflow-hidden">
-              <div className="place-items-center mb-4 relative">
-                <motion.div className="w-18 h-18 flex items-center justify-center relative" whileHover={{ y: -4, scale: 1.1, transition: { type: "spring", stiffness: 300, damping: 12 } }}>
-                  <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                  <div className="relative z-10 w-16 h-16 rounded-full flex items-center justify-center bg-black/50 border border-primary/30 shadow-inner transition-all duration-500" style={{ WebkitBackdropFilter: "blur(8px)", backdropFilter: "blur(8px)" }}>
-                    <Image src={svc.icon || svc.images[0]} alt={svc.title} width={50} height={50} className="object-contain filter group-hover:brightness-125 group-hover:scale-110 transition-all duration-500" />
-                  </div>
-                  <motion.div animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.2, 0.5] }} transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }} className="absolute inset-0 border border-primary/30 rounded-full"></motion.div>
-                </motion.div>
+    <section ref={sectionRef} onMouseEnter={handleHoverStart} onTouchStart={handleHoverStart} className="mt-1 mx-auto w-full max-w-[var(--width-custom)] px-4 xs:px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-8 xs:py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20">
+  <div className="relative text-center max-w-4xl mx-auto p-6 xs:p-8 sm:p-10 md:p-12 rounded-xl xs:rounded-2xl overflow-hidden">
+    <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-primary mb-3 xs:mb-4 font-[var(--font-heading)]">
+      Choose a Pest Service
+    </h2>
+  </div>
+  
+  <motion.div className="mt-2 grid gap-3 xs:gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5" variants={containerVariants} initial="hidden" animate={controls}>
+    {services.map((svc, i) => (
+      <motion.div key={svc.slug} variants={itemVariants} whileHover={{ scale: 1.07, rotate: Math.random() * 2 - 1, transition: { type: "spring", stiffness: 250, damping: 15 } }} whileTap={{ scale: 0.98 }} className="relative group rounded-lg xs:rounded-xl cursor-pointer">
+        <div className="absolute inset-0 rounded-lg xs:rounded-xl bg-gradient-to-r from-primary via-accent to-primary opacity-0 group-hover:opacity-100 blur-[2px] transition-opacity duration-500"></div>
+        <Link href={`/${svc.slug}`} className="relative flex flex-col h-[160px] xs:h-[180px] sm:h-[190px] md:h-[200px] lg:h-[210px] xl:h-[220px] items-center rounded-lg xs:rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 p-3 xs:p-4 sm:p-5 md:p-6 text-white bg-black border border-gray-800 hover:border-primary overflow-hidden">
+          <div className="place-items-center mb-2 xs:mb-3 sm:mb-4 relative">
+            <motion.div className="w-14 h-14 xs:w-16 xs:h-16 sm:w-18 sm:h-18 flex items-center justify-center relative" whileHover={{ y: -4, scale: 1.1, transition: { type: "spring", stiffness: 300, damping: 12 } }}>
+              <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div className="relative z-10 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center bg-black/50 border border-primary/30 shadow-inner transition-all duration-500" style={{ WebkitBackdropFilter: "blur(8px)", backdropFilter: "blur(8px)" }}>
+                <Image src={svc.icon || svc.images[0]} alt={svc.title} width={50} height={50} sizes="(max-width: 420px) 40px, (max-width: 640px) 45px, 50px" className="object-contain filter group-hover:brightness-125 group-hover:scale-110 transition-all duration-500" quality={85} />
               </div>
-              <h2 className="font-semibold text-sm sm:text-base text-center group-hover:text-accent transition-all duration-300 group-hover:font-bold font-[var(--font-body)]">
-                {svc.title}
-              </h2>
-              <div className="mt-2 opacity-0 group-hover:opacity-90 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
-              </div>
-            </Link>
-          </motion.div>
-        ))}
-        <motion.div variants={itemVariants}>
-          <Link href="/services" className="group flex flex-col items-center h-[190px] rounded-xl shadow-lg transition-all duration-500 p-6 text-white bg-black border border-gray-800 hover:border-primary hover:scale-110 hover:rotate-1 hover:-translate-y-2 relative overflow-hidden">
-            <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 blur-2xl transition duration-500"></div>
-            <div className="w-16 h-16 flex items-center justify-center mb-4 relative">
-              <div className="absolute inset-0 rounded-full border-2 border-primary/40 animate-ping group-hover:animate-none"></div>
-              <div className="relative z-10 w-16 h-16 flex items-center justify-center bg-black/60 rounded-full transition-all duration-500 group-hover:scale-105" style={{ WebkitBackdropFilter: "blur(8px)", backdropFilter: "blur(8px)" }}>
-                <span className="text-3xl font-bold text-accent transition-colors duration-500">+</span>
-              </div>
-            </div>
-            <p className="font-semibold text-sm sm:text-base text-center group-hover:text-accent transition-all duration-300 group-hover:font-bold font-[var(--font-body)]">
-              Show All Services
-            </p>
-          </Link>
-        </motion.div>
+              <motion.div animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.2, 0.5] }} transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }} className="absolute inset-0 border border-primary/30 rounded-full"></motion.div>
+            </motion.div>
+          </div>
+          <h2 className="font-semibold text-xs xs:text-sm sm:text-base md:text-base lg:text-lg text-center group-hover:text-accent transition-all duration-300 group-hover:font-bold font-[var(--font-body)] leading-tight">
+            {svc.title}
+          </h2>
+          <div className="mt-1 xs:mt-2 opacity-0 group-hover:opacity-90 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+            <div className="w-1.5 h-1.5 xs:w-2 xs:h-2 bg-accent rounded-full animate-pulse"></div>
+          </div>
+        </Link>
       </motion.div>
-    </section>
+    ))}
+    
+    <motion.div variants={itemVariants}>
+      <Link href="/services" className="group flex flex-col items-center h-[160px] xs:h-[180px] sm:h-[190px] md:h-[200px] lg:h-[210px] xl:h-[220px] rounded-lg xs:rounded-xl shadow-lg transition-all duration-500 p-3 xs:p-4 sm:p-5 md:p-6 text-white bg-black border border-gray-800 hover:border-primary hover:scale-110 hover:rotate-1 hover:-translate-y-2 relative overflow-hidden">
+        <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 blur-2xl transition duration-500"></div>
+        <div className="w-14 h-14 xs:w-16 xs:h-16 flex items-center justify-center mb-2 xs:mb-3 sm:mb-4 relative">
+          <div className="absolute inset-0 rounded-full border-2 border-primary/40 animate-ping group-hover:animate-none"></div>
+          <div className="relative z-10 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center bg-black/60 rounded-full transition-all duration-500 group-hover:scale-105" style={{ WebkitBackdropFilter: "blur(8px)", backdropFilter: "blur(8px)" }}>
+            <span className="text-2xl xs:text-3xl font-bold text-accent transition-colors duration-500">+</span>
+          </div>
+        </div>
+        <p className="font-semibold text-xs xs:text-sm sm:text-base md:text-base lg:text-lg text-center group-hover:text-accent transition-all duration-300 group-hover:font-bold font-[var(--font-body)] leading-tight">
+          Show All Services
+        </p>
+      </Link>
+    </motion.div>
+  </motion.div>
+</section>
   );
 }
