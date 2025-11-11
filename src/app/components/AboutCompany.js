@@ -29,13 +29,13 @@ export default function AboutCompany() {
       <div className="w-custom mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center px-4 sm:px-6 lg:px-8">
         <div>
           <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-3xl sm:text-4xl font-bold text-primary leading-snug mb-4 font-[var(--font-heading)]">
-            Dubai's Most Trusted Pest Control Company
+            Dubai&apos;s Most Trusted Pest Control Company
           </motion.h2>
           <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }} className="text-black mb-4 leading-relaxed text-sm sm:text-base font-[var(--font-body)]">
-            For over 10 years, we've been protecting Dubai homes and businesses from pest infestations. Our team of licensed professionals uses the latest eco-friendly treatments and cutting-edge technology to ensure your property stays pest-free.
+            For over 10 years, we&apos;ve been protecting Dubai homes and businesses from pest infestations. Our team of licensed professionals uses the latest eco-friendly treatments and cutting-edge technology to ensure your property stays pest-free.
           </motion.p>
           <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.4 }} viewport={{ once: true }} className="text-black leading-relaxed mb-6 text-sm sm:text-base font-[var(--font-body)]">
-            We understand the unique challenges of pest control in Dubai's climate and have developed specialized solutions that work effectively in our environment. From residential apartments to large commercial complexes — we've got you covered.
+            We understand the unique challenges of pest control in Dubai&apos;s climate and have developed specialized solutions that work effectively in our environment. From residential apartments to large commercial complexes — we&apos;ve got you covered.
           </motion.p>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-3 mb-6">
             {trustPoints.map((item, i) => (
