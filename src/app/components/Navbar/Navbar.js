@@ -7,7 +7,7 @@ import { FaUserCircle, FaSignInAlt, FaUserPlus } from "react-icons/fa";
 import { Menu, X, Settings } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import ServicesDropdown from "@/app/components/Navbar/ServicesDropdown";
-import ComplianceDropdown from "@/app/components/Navbar/complianceDropdown";
+import ComplianceDropdown from "./ComplianceDropdown";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,7 +29,7 @@ export default function Navbar() {
         <div className="hidden md:flex space-x-6 text-black font-medium font-[var(--font-heading)]">
           <Link href="/" className="hover:text-primary transition-colors duration-200">Home</Link>
           <ServicesDropdown />
-          <ComplianceDropdown />
+          <ComplianceDropdown/>
           <Link href="/about-us" className="hover:text-primary transition-colors duration-200">About</Link>
           <Link href="/contact-us" className="hover:text-primary transition-colors duration-200">Contact</Link>
         </div>
