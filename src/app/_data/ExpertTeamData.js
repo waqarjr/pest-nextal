@@ -1428,7 +1428,7 @@ export const ExpertTeamData = {
     points:[],
   },
 ],
-    bottomHeading:"Let Our Experts Handle Your Cockroach Problem",
+    bottomHeading:"Book Sanitization Today",
     bottomParagraph:""
 },
 "residential-pest-control":{

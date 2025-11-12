@@ -26,7 +26,7 @@ export default function AboutCompany() {
 
   return (
 <section className="section bg-secondary py-8 md:py-12 lg:py-14 xl:py-16">
-  <div className="w-full max-w-[var(--width-custom)] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center px-4 md:px-8 lg:px-10">
+  <div className="max-w-[var(--width-custom)] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center px-4 md:px-8 lg:px-10">
     
     {/* Content Column */}
     <div className="space-y-3 md:space-y-4">

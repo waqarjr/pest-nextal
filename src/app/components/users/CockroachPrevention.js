@@ -1,6 +1,6 @@
 import { Utensils, ShieldCheck, Trash2, Droplet, Search } from "lucide-react";
 
- const PreventionTips = () => {
+ const CockroachPrevention = () => {
   const tips = [
     { icon: <Utensils className="w-7 h-7 text-accent" />, title: "Keep Kitchen Clean", desc: "Seal food containers, wipe counters, and never leave food or liquids exposed." },
     { icon: <ShieldCheck className="w-7 h-7 text-accent" />, title: "Block Entry Points", desc: "Seal cracks, drains, and gaps around doors, windows, and pipes." },
@@ -11,7 +11,7 @@ import { Utensils, ShieldCheck, Trash2, Droplet, Search } from "lucide-react";
 
   return (
     <section className="py-16 sm:py-20 bg-secondary text-center font-[var(--font-body)]">
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 py-6">
+      <div className="max-w-[var(--width-custom)] mx-auto px-3 sm:px-6 py-6">
         <h3 className="text-2xl sm:text-3xl lg:text-4xl font-[var(--font-heading)] font-bold text-primary mb-10 sm:mb-14">Top Cockroach Prevention Tips</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {tips.map((item, i) => (
@@ -26,4 +26,4 @@ import { Utensils, ShieldCheck, Trash2, Droplet, Search } from "lucide-react";
     </section>
   );
 };
-export default PreventionTips;
+export default CockroachPrevention;
