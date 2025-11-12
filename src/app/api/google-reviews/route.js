@@ -67,7 +67,6 @@ export async function GET(req) {
       });
     }
 
-    console.log("Successfully fetched", data.result.reviews.length, "reviews");
 
     return NextResponse.json({ 
       reviews: data.result.reviews,

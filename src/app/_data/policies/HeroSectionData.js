@@ -29,7 +29,7 @@ const HeroSectionData = {
         paragraph1:""
     },
     "digital-reporting":{
-        heading:"digital-reporting",
+        heading:"Digital Reporting",
         paragraph:"Transform your pest management operations with our advanced digital reporting system and client portal. Real-time updates, comprehensive analytics, and secure client access for modern, efficient pest control management.",
         paragraph1:"",
     },

@@ -14,6 +14,9 @@ import DocumentationData from '@/app/_data/policies/DocumentationData';
 import Professional from './Professional';
 import ProfessionalData from '@/app/_data/policies/ProfessionalData';
 import GoogleReviews from '@/app/components/GoogleReviews';
+import MuncParagraph from './MuncParagraph';
+import MuncComp from './MuncComp';
+import ShipPolicies from './ShipPolicies';
 
 
 export default  function Page ({params})  {
@@ -21,15 +24,27 @@ export default  function Page ({params})  {
     const HeroData = HeroSectionData[slug];
     const MethData= MethodsData[slug];
     const ServData = ServicesData[slug];
-    // const DocData = DocumentationData[slug];
-    // const ProfData = ProfessionalData[slug];
+    const DocData = DocumentationData[slug];
+    const ProfData = ProfessionalData[slug];
+
+      const showDoc = [ 
+        'audit-documentation','municipality-compliance', 'digital-reporting', 
+        'light-trap-analysis','ship-sanitation','trend-analysis',
+      ];
+      const showProf = [
+        'audit-documentation','municipality-compliance','digital-reporting',
+        'light-trap-analysis', 'ship-sanitation',
+      ];
     return (
     <>
             <HeroSection data={HeroData} />
+            {slug === 'municipality-compliance' && <MuncParagraph/>}
+            {slug === 'ship-sanitation' && <ShipPolicies/>}
             <Methods data={MethData} />
             <Services data={ServData} />
-            {/* <Documentation data={DocData} />
-            <Professional data={ProfData} /> */}
+            {showDoc.includes(slug) && <Documentation data={DocData} />}
+            {showProf.includes(slug) && <Professional data={ProfData} />}
+            {slug === 'municipality-compliance' && <MuncComp/>}
             <AboutCompany/>
             <GoogleReviews/>
             <ContactInfo/>

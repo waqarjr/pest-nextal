@@ -13,6 +13,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body cz-shortcut-listen="true" className="__variable_188709 __variable_9a8899 antialiased" >
         <Topbar/>
         <Navbar/>

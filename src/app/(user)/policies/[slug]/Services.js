@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShieldCheck, Home, Building2, Factory, Store,Users,CheckCircle} from "lucide-react";
+import { CheckCircle} from "lucide-react";
 
 
 
