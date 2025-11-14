@@ -35,7 +35,7 @@ const HeroSection = () => {
   const handleClick = e => { const carousel = e.currentTarget; const clickX = e.clientX - carousel.getBoundingClientRect().left; const carouselWidth = carousel.offsetWidth; if (clickX > carouselWidth / 2) setCurrentSlide(prev => (prev + 1) % carouselImages.length); else setCurrentSlide(prev => (prev - 1 + carouselImages.length) % carouselImages.length); };
 
   return (
-<div className="min-h-screen w-full max-w-[var(--width-custom)] mx-auto flex items-center relative bg-secondary px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+<div className="min-h-screen w-full max-w-[var(--width-custom)] mx-auto flex items-center relative bg-secondary px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-12">
   <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }} className="absolute top-3 right-3 xs:top-4 xs:right-4 sm:top-5 sm:right-5 md:top-6 md:right-6 z-20 bg-error text-white px-3 py-1 xs:px-4 xs:py-1.5 sm:px-5 sm:py-2 rounded-full text-xs xs:text-sm sm:text-base font-semibold shadow-md font-[var(--font-heading)]">
     24/7 Available
   </motion.div>
